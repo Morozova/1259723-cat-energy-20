@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Подбор программы</title>
+      <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
 <header class="page-header">
@@ -15,6 +16,60 @@
     </button>
   </nav>
 </header>
+<main class="page__main">
+  <section class="form">
+    <h2 class="form__title">Подбор программы</h2>
+    <form class="form__form application-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="application-form__data">
+        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <label>Имя:*</label>
+        <input type="text" placeholder="Барсик">
+        <label>Вес (кг):*</label>
+        <input type="number" placeholder="7">
+        <label>Возраст (лет):</label>
+        <input type="number" placeholder="7">
+      </fieldset>
+      <fieldset class="application-form__target">
+        <input name="target" type="radio" checked>
+        <label>Похудение</label>
+        <input name="target" type="radio">
+        <label>Набор массы</label>
+        <input name="target" type="radio">
+        <label>Не знаю (Нужен ваш совет)</label>
+      </fieldset>
+      <fieldset class="application-form__contact">
+        <legend>Контактные данные (владельца кота)</legend>
+        <label>Email:*</label>
+        <input type="email" placeholder="kuklachev@gmail.com">
+        <label>Телефон:*</label>
+        <input type="tel" placeholder="8 (960) 900-60-90">
+      </fieldset>
+      <fieldset class="application-form__comment">
+        <legend>Комментарий</legend>
+        <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="application-form__additionally">
+        <legend>Дополнительно</legend>
+        <input type="checkbox" checked>
+        <label>Сахарозаменитель</label>
+        <input type="checkbox">
+        <label>Питьевая вода</label>
+        <input type="checkbox">
+        <label>Молоко</label>
+        <input type="checkbox">
+        <label>Витамины</label>
+      </fieldset>
+      <button class="button application-form__button" type="submit">Отправить заявку</button>
+      <span>* — Обязательные поля</span>
+    </form>
+  </section>
+  <section class="contact">
+    <h2 class="visually-hidden">Наши контакты</h2>
+    <p class="contact__cooperation">Приглашаем к сотрудничеству дилеров!</p>
+    <p class="contact__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <img class="contact__map" src="img/bg-map-mobile@1x.png" width="320" height="362">
+  </section>
+</main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo">
