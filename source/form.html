@@ -16,6 +16,86 @@
     </button>
   </nav>
 </header>
+<main class="page__main">
+  <section class="form">
+    <h2 class="form__title">Подбор программы</h2>
+    <form class="form__form application-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="application-form__data">
+        <p class="application-form__instruction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="application-form__field">
+        <label for="form-name">Имя:*</label>
+        <input id="form-name" class="application-form__input" type="text" placeholder="Барсик">
+        </div>
+        <div class="application-form__field">
+        <label for="form-weight">Вес (кг):*</label>
+        <input id="form-weight" class="application-form__input" type="number" placeholder="7">
+        </div>
+        <div class="application-form__field">
+        <label for="form-age">Возраст (лет):</label>
+        <input id="form-age" class="application-form__input" type="number" placeholder="7">
+        </div>
+      </fieldset>
+      <fieldset class="application-form__target">
+        <div class="application-form__field">
+        <input id="form-slim" class="application-form__radio" name="target" type="radio" checked>
+        <label for="form-slim">Похудение</label>
+        </div>
+        <div class="application-form__field">
+        <input id="form-mass" class="application-form__radio" name="target" type="radio">
+        <label for="form-mass">Набор массы</label>
+        </div>
+        <div class="application-form__field">
+        <input id="form-advice" class="application-form__radio" name="target" type="radio">
+        <label for="form-advice">Не знаю (Нужен ваш совет)</label>
+        </div>
+      </fieldset>
+      <fieldset class="application-form__contact">
+        <legend class="application-form__legend">Контактные данные (владельца кота)</legend>
+        <div class="application-form__field">
+        <label for="form-email">Email:*</label>
+        <input id="form-email" class="application-form__input" type="email" placeholder="kuklachev@gmail.com">
+        </div>
+        <div class="application-form__field">
+        <label for="form-phone">Телефон:*</label>
+        <input id="form-phone" class="application-form__input" type="tel" placeholder="8 (960) 900-60-90">
+        </div>
+      </fieldset>
+      <fieldset class="application-form__comment">
+        <legend class="application-form__legend">Комментарий</legend>
+        <textarea class="application-form__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="application-form__additionally">
+        <legend class="application-form__legend">Дополнительно</legend>
+        <div class="application-form__field">
+        <input id="form-sweetener" class="application-form__checkbox" type="checkbox" checked>
+        <label for="form-sweetener">Сахарозаменитель</label>
+        </div>
+        <div class="application-form__field">
+        <input id="form-water" class="application-form__checkbox" type="checkbox">
+        <label for="form-water">Питьевая вода</label>
+        </div>
+        <div class="application-form__field">
+        <input id="form-milk" class="application-form__checkbox" type="checkbox">
+        <label for="form-milk">Молоко</label>
+        </div>
+        <div class="application-form__field">
+        <input id="form-vitamin" class="application-form__checkbox" type="checkbox">
+        <label for="form-vitamin">Витамины</label>
+        </div>
+      </fieldset>
+      <button class="button application-form__button" type="submit">Отправить заявку</button>
+      <span class="application-form__note">* — Обязательные поля</span>
+    </form>
+  </section>
+  <section class="contact">
+    <h2 class="visually-hidden">Наши контакты</h2>
+    <p class="contact__cooperation">Приглашаем к сотрудничеству дилеров!</p>
+    <p class="contact__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+  </section>
+  <section class="map">
+    <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="362">
+  </section>
+</main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo">
