@@ -25,3 +25,19 @@
   font-size: 16px;
   line-height: 0px;
 }
+
+.catalog__wrap {
+  display: grid;
+}
+
+.catalog__list {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
