@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -63,7 +64,7 @@
     <ol class="how-it-works__list">
       <li class="how-it-works__item how-it-works__item--nutrients">
         <p class="how-it-works__description">
-        Функциональное питание содержит только полезные питательные вещества.</p>
+          Функциональное питание содержит только полезные питательные вещества.</p>
       </li>
       <li class="how-it-works__item how-it-works__item--easy-cook">
         <p class="how-it-works__description">Выпускается в виде порошка, который нужно лишь залить кипятком и
@@ -83,29 +84,31 @@
       Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
       без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
     </p>
-    <div class="example__statistic statistic">
-      <div class="statistic__weight">
-        <span class="statistic__number">5 кг</span>
-        <span class="statistic__value">Снижение веса</span>
+    <div class="example__wrap">
+      <div class="example__statistic statistic">
+        <div class="statistic__weight">
+          <span class="statistic__number">5 кг</span>
+          <span class="statistic__value">Снижение веса</span>
+        </div>
+        <div class="statistic__days">
+          <span class="statistic__number">60 дней</span>
+          <span class="statistic__value">Затрачено времени</span>
+        </div>
+        <div class="statistic__expenses">
+          <span class="statistic__expenses-value">Затраты на питание:</span>
+          <span class="statistic__expenses-number">15 000 Руб.</span>
+        </div>
       </div>
-      <div class="statistic__days">
-        <span class="statistic__number">60 дней</span>
-        <span class="statistic__value">Затрачено времени</span>
+      <div class="slider">
+        <ul class="slider__list">
+          <li class="slider__item"></li>
+          <li class="slider__item"></li>
+        </ul>
+        <p class="slider__toggles">
+          <button class="slider__toggle slider__toggle--before" type="button">Было</button>
+          <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
+        </p>
       </div>
-      <div class="statistic__expenses">
-        <span class="statistic__expenses-value">Затраты на питание:</span>
-        <span class="statistic__expenses-number">15 000 Руб.</span>
-      </div>
-    </div>
-    <div class="slider">
-    <ul class="slider__list">
-      <li class="slider__item"></li>
-      <li class="slider__item"></li>
-    </ul>
-    <p class="slider__toggles">
-      <button class="slider__toggle slider__toggle--before" type="button">Было</button>
-      <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
-    </p>
     </div>
   </section>
   <section class="contact">

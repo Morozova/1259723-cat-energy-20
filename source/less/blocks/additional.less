@@ -4,3 +4,13 @@
   line-height: 24px;
   color: @black;
 }
+
+.additional__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

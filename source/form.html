@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Подбор программы</title>
-      <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подбор программы</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
 <header class="page-header">
   <a class="page-header__logo">
-    <img src="https://via.placeholder.com/150x150" width="191" height="37">
+    <img src="../img/logo-mobile.svg" width="191" height="37">
   </a>
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
+    <div class="main-nav__wrap">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a>
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="page__main">
   <section class="form">
     <h2 class="form__title">Подбор программы</h2>
     <form class="form__form application-form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="application-form__data">
-        <p class="application-form__instruction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <div class="application-form__field">
-        <label for="form-name">Имя:*</label>
-        <input id="form-name" class="application-form__input" type="text" placeholder="Барсик">
-        </div>
-        <div class="application-form__field">
-        <label for="form-weight">Вес (кг):*</label>
-        <input id="form-weight" class="application-form__input" type="number" placeholder="7">
-        </div>
-        <div class="application-form__field">
-        <label for="form-age">Возраст (лет):</label>
-        <input id="form-age" class="application-form__input" type="number" placeholder="7">
-        </div>
-      </fieldset>
-      <fieldset class="application-form__target">
-        <div class="application-form__field">
-        <input id="form-slim" class="application-form__radio" name="target" type="radio" checked>
-        <label for="form-slim">Похудение</label>
-        </div>
-        <div class="application-form__field">
-        <input id="form-mass" class="application-form__radio" name="target" type="radio">
-        <label for="form-mass">Набор массы</label>
-        </div>
-        <div class="application-form__field">
-        <input id="form-advice" class="application-form__radio" name="target" type="radio">
-        <label for="form-advice">Не знаю (Нужен ваш совет)</label>
-        </div>
-      </fieldset>
+      <div class="application-form__basic-data">
+        <fieldset class="application-form__data">
+          <p class="application-form__instruction">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <div class="application-form__field">
+            <label for="form-name">Имя:*</label>
+            <input id="form-name" class="application-form__input" type="text" placeholder="Барсик">
+          </div>
+          <div class="application-form__field">
+            <label for="form-weight">Вес (кг):*</label>
+            <input id="form-weight" class="application-form__input" type="number" placeholder="7">
+          </div>
+          <div class="application-form__field">
+            <label for="form-age">Возраст (лет):</label>
+            <input id="form-age" class="application-form__input" type="number" placeholder="7">
+          </div>
+        </fieldset>
+        <fieldset class="application-form__target">
+          <div class="application-form__field">
+            <input id="form-slim" class="application-form__radio" name="target" type="radio" checked>
+            <label for="form-slim">Похудение</label>
+          </div>
+          <div class="application-form__field">
+            <input id="form-mass" class="application-form__radio" name="target" type="radio">
+            <label for="form-mass">Набор массы</label>
+          </div>
+          <div class="application-form__field">
+            <input id="form-advice" class="application-form__radio" name="target" type="radio">
+            <label for="form-advice">Не знаю (Нужен ваш совет)</label>
+          </div>
+        </fieldset>
+      </div>
       <fieldset class="application-form__contact">
         <legend class="application-form__legend">Контактные данные (владельца кота)</legend>
         <div class="application-form__field">
-        <label for="form-email">Email:*</label>
-        <input id="form-email" class="application-form__input" type="email" placeholder="kuklachev@gmail.com">
+          <label for="form-email">Email:*</label>
+          <input id="form-email" class="application-form__input" type="email" placeholder="kuklachev@gmail.com">
         </div>
         <div class="application-form__field">
-        <label for="form-phone">Телефон:*</label>
-        <input id="form-phone" class="application-form__input" type="tel" placeholder="8 (960) 900-60-90">
+          <label for="form-phone">Телефон:*</label>
+          <input id="form-phone" class="application-form__input" type="tel" placeholder="8 (960) 900-60-90">
         </div>
       </fieldset>
       <fieldset class="application-form__comment">
@@ -67,24 +89,26 @@
       <fieldset class="application-form__additionally">
         <legend class="application-form__legend">Дополнительно</legend>
         <div class="application-form__field">
-        <input id="form-sweetener" class="application-form__checkbox" type="checkbox" checked>
-        <label for="form-sweetener">Сахарозаменитель</label>
+          <input id="form-sweetener" class="application-form__checkbox" type="checkbox" checked>
+          <label for="form-sweetener">Сахарозаменитель</label>
         </div>
         <div class="application-form__field">
-        <input id="form-water" class="application-form__checkbox" type="checkbox">
-        <label for="form-water">Питьевая вода</label>
+          <input id="form-water" class="application-form__checkbox" type="checkbox">
+          <label for="form-water">Питьевая вода</label>
         </div>
         <div class="application-form__field">
-        <input id="form-milk" class="application-form__checkbox" type="checkbox">
-        <label for="form-milk">Молоко</label>
+          <input id="form-milk" class="application-form__checkbox" type="checkbox">
+          <label for="form-milk">Молоко</label>
         </div>
         <div class="application-form__field">
-        <input id="form-vitamin" class="application-form__checkbox" type="checkbox">
-        <label for="form-vitamin">Витамины</label>
+          <input id="form-vitamin" class="application-form__checkbox" type="checkbox">
+          <label for="form-vitamin">Витамины</label>
         </div>
       </fieldset>
-      <button class="application-form__button" type="submit">Отправить заявку</button>
-      <span class="application-form__note">* — Обязательные поля</span>
+      <div class="application-form__wrap-button">
+        <button class="application-form__button" type="submit">Отправить заявку</button>
+        <span class="application-form__note">* — Обязательные поля</span>
+      </div>
     </form>
   </section>
   <section class="contact">
@@ -99,7 +123,7 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo">
-      <img src="https://via.placeholder.com/150x150" width="191" height="37">
+      <img src="img/logo-footer.svg" width="128" height="24">
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">

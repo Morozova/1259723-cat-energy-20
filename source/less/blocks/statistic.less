@@ -1,3 +1,30 @@
+.statistic {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+    width: 50%;
+  }
+}
+
+.statistic__weight,
+.statistic__days {
+  @media (max-width: @mobile-width-only) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
 .statistic__number {
   .uppercase;
   font-size: 24px;
