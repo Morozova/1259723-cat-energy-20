@@ -12,3 +12,12 @@
 .example__description {
   font-family: "Arial", sans-serif;
 }
+
+.example__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}

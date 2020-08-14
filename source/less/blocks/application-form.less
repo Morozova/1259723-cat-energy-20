@@ -45,6 +45,12 @@
 
 .application-form__contact {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .application-form__textarea {
@@ -55,4 +61,35 @@
 .application-form__additionally {
   font-size: 16px;
   color: @black;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.application-form__field {
+  width: 50%;
+}
+
+.application-form__basic-data {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.application-form__wrap-button {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
