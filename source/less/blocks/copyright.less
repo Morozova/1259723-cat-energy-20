@@ -1,4 +1,38 @@
+.copyright {
+  width: 100%;
+  padding: 22px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    padding: 0;
+  }
+}
+
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__name {
   font-family: "Arial", sans-serif;
   font-size: 16px;
+  color: @special_dark-grey-1;
+}
+
+.copyright__name:active {
+  opacity: 0.3;
+}
+
+.copyright__icon {
+  fill: @special_grey-3;
+}
+
+.copyright__icon:focus,
+.copyright__icon:hover {
+  fill: @basic_green-1;
+}
+
+.copyright__icon:active {
+  opacity: 0.3;
 }

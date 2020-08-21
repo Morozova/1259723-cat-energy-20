@@ -35,9 +35,23 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.catalog__more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog__more-show::before {
+  content: url("../../img/icon-plus-mobile.svg");
+  width: 30px;
+  height: 30px;
 }
