@@ -16,23 +16,10 @@
   width: auto;
 }
 
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav__list a {
-  color: @black;
-
-  @media (min-width: @desktop-width) {
-    color: @white;
-  }
-}
-
 .main-nav__toggle {
-  margin-right: 23px;
+  margin-right: 6.25%;
   position: absolute;
-  bottom: 10px;
+  top: -45px;
   right: 0;
   z-index: 2;
   display: block;
@@ -73,14 +60,11 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 0;
-  right: 6.25%;
-
   &::before,
   &::after {
     content: "";
     position: absolute;
-    bottom: 35px;
+    left: 0;
     width: 24px;
     height: 2px;
     background-color: #000000;

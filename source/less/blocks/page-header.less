@@ -1,4 +1,4 @@
-.page-header {
+.page-header--index {
   @media (min-width: @desktop-width) {
     width: 100%;
     position: absolute;
@@ -10,17 +10,38 @@
 
 .page-header__wrap {
   margin-top: 12px;
-  margin-bottom: 16px;
   color: @black;
 
   @media (min-width: @tablet-width) {
+    padding: 0 3.9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 7.63%;
+  }
 }
 
 .page-header__logo {
+  width: 191px;
+  height: 37.61px;
   padding-left: 6.29%;
+  margin-bottom: 16px;
   display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.page-header__logo:hover,
+.page-header__logo:focus {
+  opacity: 0.8;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
 }

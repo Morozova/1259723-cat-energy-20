@@ -4,12 +4,14 @@
   background-size: 100% 305px;
   background-repeat: no-repeat;
   background-position: center top;
-  min-height: 480px;
-  padding-top: 27px;
+  padding: 0 6.25%;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
     color: @black;
+    background-image: none;
+    padding: 0 3.9%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,31 +19,32 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-size: 720px 696px;
-    color: @black;
+    padding: 0 7.64%;
+    margin-bottom: 82px;
   }
 }
 
 .promo__wrap {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 27px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 117px;
-    padding-right: 0;
+    padding-top: 60px;
+    padding-bottom: 525px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 190px;
-    padding-right: 0;
+    padding-top: 223px;
+    padding-bottom: 180px;
   }
 }
 
 .promo__header {
-  margin-top: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     text-align: left;
@@ -49,10 +52,6 @@
     line-height: 60px;
     width: 414px;
     margin-bottom: 41px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 144px;
   }
 }
 
@@ -63,8 +62,14 @@
   margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
     text-align: left;
     margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
   }
 }
 
@@ -76,8 +81,8 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     z-index: -1;
-    top: 310px;
-    left: 210px;
+    top: 350px;
+    left: 200px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,18 +94,16 @@
 
 .promo__button {
   display: inline-block;
-  background-color: @basic_green-1;
   color: @white;
+  background-color: @basic_green-1;
   .uppercase;
   padding: 7px 0;
   text-align: center;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 31.7%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 15%;
+    font-size: 20px;
+    padding: 14px 0;
+    width: 244px;
   }
 }
