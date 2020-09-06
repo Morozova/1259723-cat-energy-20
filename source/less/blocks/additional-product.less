@@ -1,14 +1,98 @@
+.additional-product {
+  border-bottom: 1px solid @special_grey-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 25px;
+    padding-top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 40px;
+    padding: 15px 0 16px;
+  }
+}
+
+.additional-product__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.additional-product:first-child {
+  border-top: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
+}
+
+.additional-product:last-child {
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
 .additional-product__title {
   .uppercase;
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: @special_dark-grey-2;
+  margin-top: 13px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.3%;
+  }
 }
 
 .additional-product__info {
   font-family: "Arial", sans-serif;
   line-height: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.3%;
+    justify-content: space-between;
+  }
+}
+
+.additional-product__product {
+  @media (min-width: @tablet-width) {
+    margin-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .additional-product__button {
@@ -18,5 +102,16 @@
   font-size: 16px;
   line-height: 0px;
   font-family: inherit;
-  padding: 20px 109px;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 244px;
+  }
 }

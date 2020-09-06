@@ -1,27 +1,47 @@
 .statistic {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-direction: row;
   }
 
   @media (min-width: @desktop-width) {
-    flex-wrap: wrap;
-    width: 50%;
+    flex-direction: column;
+    width: 366px;
   }
 }
 
-.statistic__weight,
-.statistic__days {
-  @media (max-width: @mobile-width-only) {
+.statistic__report-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
     width: 50%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 55px;
+  }
+}
+
+.statistic__report {
+  position: relative;
+  width: 123px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  border: 1px solid @special_grey-2;
+  border-radius: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 159px;
+    padding-bottom: 20px;
   }
 }
 
@@ -30,22 +50,84 @@
   font-size: 24px;
   line-height: 24px;
   color: @black;
+  display: block;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .statistic__value {
   text-transform: lowercase;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
-  font-family: "Arial", sans-serif;
+  text-align: center;
+  width: 66px;
+  display: block;
+  background-color: @basic_grey;
+  position: absolute;
+  top: 46px;
+  left: 18px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    width: auto;
+    background-color: @white;
+    top: 62px;
+    left: 19px;
+    white-space: nowrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_grey;
+  }
+}
+
+.statistic__expenses {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .statistic__expenses-value {
   .uppercase;
   line-height: 20px;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .statistic__expenses-number {
   .uppercase;
   line-height: 20px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+  }
 }

@@ -1,10 +1,61 @@
 .gift {
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-size: 100% 100%;
+  background-position: center center;
   background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 112px;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 47px;
+    padding-left: 423px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .gift__description {
   color: @white;
   line-height: 20px;
   font-family: "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 127px;
+  }
+}
+
+.gift__description::before {
+  content: "";
+  background-image: url("../../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 60px;
+  bottom: 60px;
+  left: 111px;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    left: -335px;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -63px;
+    left: 96px;
+  }
 }
