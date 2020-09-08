@@ -7,12 +7,30 @@
   text-transform: none;
   font-size: 24px;
   line-height: 26px;
+  padding-right: 20px;
   margin-bottom: 33px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 80px;
+    margin-bottom: 76px;
+    padding-right: 39px;
+  }
+}
+
+.application-form__legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
   }
 }
 
@@ -24,7 +42,7 @@
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 }
 
@@ -35,6 +53,12 @@
   padding: 9px 15px;
   border: 1px solid @special_grey-2;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 17px;
+  }
 }
 
 .application-form__label {
@@ -46,12 +70,13 @@
   font-size: 14px;
   margin-bottom: 40px;
   padding-right: 20px;
+  padding-left: 5px;
 
   @media (min-width: @tablet-width) {
     width: 323px;
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 71px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,6 +89,7 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
+    padding-left: 3px;
     margin-bottom: 50px;
   }
 
@@ -79,13 +105,13 @@
   font-size: 16px;
   border-bottom: 1px solid @special_grey-2;
   padding-bottom: 9px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     border: none;
-    margin-bottom: 36px;
+    margin-bottom: 43px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,13 +125,14 @@
   color: @special_dark-grey-2;
   border-bottom: 1px solid @special_grey-2;
   margin-bottom: 25px;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     border: 1px solid @special_grey-2;
     box-sizing: border-box;
     font-size: 20px;
     line-height: 30px;
-    padding: 22px 26px 13px;
+    padding: 24px 26px 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -117,7 +144,11 @@
 .application-form__target-field {
   display: flex;
   align-items: center;
-  margin-bottom: 11px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+  }
 }
 
 .application-form__radio {
@@ -140,47 +171,59 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 16px;
   }
 }
 
 .application-form__target-label::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 1px;
   top: 0;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: 1px solid @special_grey-2;
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    left: -15px;
   }
 }
 
 .application-form__target-label::after {
   content: "";
   position: absolute;
-  left: 9px;
+  left: 10px;
   top: 9px;
   display: none;
   background-color: @basic_green-1;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    left: 12px;
+    left: -4px;
     top: 12px;
   }
 }
 
 .application-form__radio:checked + .application-form__target-label::after {
   display: block;
+}
+
+.application-form__contact {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
 }
 
 .application-form__contact-wrap {
@@ -192,7 +235,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 41px;
+    row-gap: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -205,9 +248,58 @@
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  justify-content: space-between;
+  column-gap: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    column-gap: 15px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 569px;
+    margin-bottom: 20px;
+  }
+}
+
+.application-form__contact-legend {
+  color: @black;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 33px;
+  background-color: @white;
+  width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+    width: auto;
+    padding-right: 41px;
+  }
+}
+
+.application-form__contact-legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+  }
+}
+
+.application-form__contact-label {
+  margin-right: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
   }
 }
 
@@ -215,7 +307,7 @@
   margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 62px;
   }
 }
 
@@ -223,13 +315,18 @@
   resize: none;
   .uppercase;
   font-family: inherit;
+  font-size: 16px;
+  height: 150px;
+  padding: 10px 13px;
   width: 100%;
-  height: 137px;
-  padding-top: 10px;
-  padding-left: 10px;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    height: 155px;
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px;
   }
 }
 
@@ -248,12 +345,30 @@
   font-size: 24px;
   line-height: 26px;
   color: @black;
-  margin-bottom: 59px;
+  margin-bottom: 33px;
+  padding-right: 20px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 80px;
+    margin-bottom: 57px;
+    padding-right: 41px;
+  }
+}
+
+.application-form__additionally-legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
   }
 }
 
@@ -261,19 +376,29 @@
   font-size: 16px;
   color: @black;
   display: grid;
-  margin-bottom: 14px;
+  margin-bottom: 34px;
+  row-gap: 13px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     column-gap: 58px;
-    row-gap: 11px;
+    row-gap: 31px;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 76px;
   }
+}
+
+.application-form__additionally-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
 }
 
 .application-form__checkbox {
@@ -291,6 +416,12 @@
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
 }
 
 .application-form__additionally-label::before {
@@ -299,13 +430,14 @@
   left: 0;
   top: 0;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: 1px solid @special_grey-2;
 
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    left: -14px;
   }
 }
 
@@ -313,7 +445,7 @@
   background-image: url("../../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 75%;
+  background-size: 55%;
 }
 
 .application-form__wrap-button {
@@ -333,15 +465,15 @@
   font-family: inherit;
   color: @white;
   background-color: @basic_green-1;
-  padding: 7px 44px;
-  margin-bottom: 24px;
+  padding: 10px 0;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 0px;
-    width: 282px;
+    width: 286px;
     padding: 27px 0;
-    margin-right: 61px;
+    margin-right: 62px;
     margin-bottom: 0;
   }
 
@@ -352,6 +484,7 @@
 }
 
 .application-form__note {
+  font-family: "Arial", sans-serif;
   text-transform: none;
   line-height: 16px;
   color: @black;
