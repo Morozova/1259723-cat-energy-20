@@ -1,10 +1,69 @@
 .gift {
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-size: 100% 100%;
+  background-position: center center;
   background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding-top: 62px;
+  }
+}
+
+.gift__wrap {
+  padding-top: 65px;
+  padding-bottom: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 61px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 65px 124px 65px 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 55px;
+    padding: 0;
+  }
 }
 
 .gift__description {
+  margin: 0;
+  padding: 0;
   color: @white;
+  font-size: 16px;
   line-height: 20px;
   font-family: "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
+}
+
+.gift__picture {
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 56px;
+  height: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 57px;
+    height: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -63px;
+    left: 96px;
+  }
 }

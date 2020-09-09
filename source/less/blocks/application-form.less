@@ -2,20 +2,460 @@
   .uppercase;
 }
 
+.application-form__legend {
+  color: @black;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 26px;
+  padding-right: 20px;
+  margin-bottom: 33px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 78px;
+    padding-right: 39px;
+  }
+}
+
+.application-form__legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+  }
+}
+
+.application-form__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.application-form__input {
+  font-family: inherit;
+  .uppercase;
+  font-size: 16px;
+  padding: 9px 15px;
+  border: 1px solid @special_grey-2;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 17px;
+  }
+}
+
+.application-form__label {
+  white-space: nowrap;
+}
+
 .application-form__instruction {
   color: @black;
   font-size: 14px;
+  margin-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
 }
 
-.application-form__legend {
+.application-form__basic-data {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 3px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 39px;
+  }
+}
+
+.application-form__data {
+  font-size: 16px;
+  border-bottom: 1px solid @special_grey-2;
+  padding-bottom: 9px;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 569px;
+  }
+}
+
+.application-form__target {
+  font-size: 16px;
+  color: @special_dark-grey-2;
+  border-bottom: 1px solid @special_grey-2;
+  margin-bottom: 25px;
+  padding-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @special_grey-2;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 24px 26px 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 569px;
+  }
+}
+
+.application-form__target-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.application-form__radio {
+  display: none;
+}
+
+.application-form__target-label {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @black;
+  width: 100%;
+  padding-left: 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 16px;
+  }
+}
+
+.application-form__target-label::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @special_grey-2;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 38px;
+    height: 38px;
+    left: -15px;
+  }
+}
+
+.application-form__target-label::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  display: none;
+  background-color: @basic_green-1;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: -4px;
+    top: 12px;
+  }
+}
+
+.application-form__radio:checked + .application-form__target-label::after {
+  display: block;
+}
+
+.application-form__contact {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.application-form__contact-wrap {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    row-gap: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.application-form__contact-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  column-gap: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    column-gap: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin-bottom: 20px;
+  }
+}
+
+.application-form__contact-legend {
+  color: @black;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 33px;
+  background-color: @white;
+  width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+    width: auto;
+    padding-right: 41px;
+  }
+}
+
+.application-form__contact-legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+  }
+}
+
+.application-form__contact-label {
+  margin-right: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
+  }
+}
+
+.application-form__comment {
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 62px;
+  }
+}
+
+.application-form__textarea {
+  resize: none;
+  .uppercase;
+  font-family: inherit;
+  font-size: 16px;
+  height: 150px;
+  padding: 10px 13px;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px;
+  }
+}
+
+.application-form__additionally {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.application-form__additionally-legend {
   text-transform: none;
   font-size: 24px;
   line-height: 26px;
   color: @black;
+  margin-bottom: 33px;
+  padding-right: 20px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 57px;
+    padding-right: 41px;
+  }
 }
 
-.application-form__input {
-  text-transform: inherit;
+.application-form__additionally-legend::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #68b738;
+  position: absolute;
+  z-index: -1;
+  left: 20px;
+  margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+  }
+}
+
+.application-form__additionally-wrap {
+  font-size: 16px;
+  color: @black;
+  display: grid;
+  margin-bottom: 34px;
+  row-gap: 13px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+    row-gap: 31px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 76px;
+  }
+}
+
+.application-form__additionally-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.application-form__checkbox {
+  display: none;
+}
+
+.application-form__additionally-label {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @black;
+  padding-left: 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
+}
+
+.application-form__additionally-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    width: 38px;
+    height: 38px;
+    left: -14px;
+  }
+}
+
+.application-form__checkbox:checked + .application-form__additionally-label::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+
+.application-form__wrap-button {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .application-form__button {
@@ -25,71 +465,33 @@
   font-family: inherit;
   color: @white;
   background-color: @basic_green-1;
-  padding: 7px 44px;
+  padding: 10px 0;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 0px;
+    width: 286px;
+    padding: 27px 0;
+    margin-right: 62px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin-right: 83px;
+  }
 }
 
 .application-form__note {
+  font-family: "Arial", sans-serif;
   text-transform: none;
   line-height: 16px;
   color: @black;
-}
-
-.application-form__data {
-  font-size: 16px;
-}
-
-.application-form__target {
-  font-size: 16px;
-  color: @special_dark-grey-2;
-}
-
-.application-form__contact {
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
-  }
-}
-
-.application-form__textarea {
-  .uppercase;
-  font-family: inherit;
-}
-
-.application-form__additionally {
-  font-size: 16px;
-  color: @black;
-  display: grid;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-.application-form__field {
-  width: 50%;
-}
-
-.application-form__basic-data {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
-  }
-}
-
-.application-form__wrap-button {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
+    font-size: 16px;
+    line-height: 16px;
   }
 }

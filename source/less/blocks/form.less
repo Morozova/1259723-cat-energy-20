@@ -1,6 +1,54 @@
+.form {
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 79px;
+  }
+}
+
+.form__wrap {
+  padding: 0 5.5%;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 3.8% 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 26px 7.4% 0;
+  }
+}
+
 .form__title {
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   color: @black;
+  margin-bottom: 36px;
+  margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 52px;
+    margin-top: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+    margin-left: 5px;
+  }
+}
+
+.form__form {
+  @media (min-width: @tablet-width) {
+    padding: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }

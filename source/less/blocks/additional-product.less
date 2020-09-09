@@ -1,14 +1,109 @@
+.additional-product {
+  border-bottom: 1px solid @special_grey-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 24px;
+    padding-top: 28px;
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    padding: 17px 0 16px;
+  }
+}
+
+.additional-product__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: baseline;
+    width: 610px;
+  }
+}
+
+.additional-product:first-child {
+  border-top: 1px solid @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
+}
+
+.additional-product:last-child {
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
 .additional-product__title {
   .uppercase;
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: @special_dark-grey-2;
+  padding-left: 2px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.3%;
+  }
 }
 
 .additional-product__info {
   font-family: "Arial", sans-serif;
   line-height: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    width: 286px;
+  }
+}
+
+.additional-product__product {
+  @media (min-width: @tablet-width) {
+    margin-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.additional-product__price {
+  .uppercase;
 }
 
 .additional-product__button {
@@ -18,5 +113,17 @@
   font-size: 16px;
   line-height: 0px;
   font-family: inherit;
-  padding: 20px 109px;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+    padding: 19px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 244px;
+  }
 }
