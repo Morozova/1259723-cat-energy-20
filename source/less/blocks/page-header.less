@@ -1,3 +1,11 @@
+.page-header {
+  border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
 .page-header--index {
   @media (min-width: @desktop-width) {
     width: 100%;
@@ -7,16 +15,12 @@
   }
 }
 
-.page-header__container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .page-header__wrap {
   margin-top: 12px;
   color: @black;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 12px;
     margin-top: 20px;
     padding: 0 3.9%;
     display: flex;
